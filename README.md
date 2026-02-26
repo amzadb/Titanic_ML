@@ -35,7 +35,7 @@ requirements.txt
 
     ```bash
     cd api
-    uvicorn titanic_api:app --host 127.0.0.1 --port 8000
+    uvicorn titanic_api:app --host 127.0.0.1 --port 8000 --reload
     ```
 
 4. **Run the UI**
