@@ -178,9 +178,8 @@ def summary(prompt: str = Query(None, description="Summary prompt text")):
                 if phrase in prompt_lower:
                     return prompt_dict[key]()
         return {"error": "Prompt not recognized. Please use a supported summary question or statement."}
-
-    # Default: return all summaries
-    # ...existing code...
+    else:
+        return {"error": "No prompt provided. Please include a summary prompt in the query parameters."}
 
 @app.get("/predict")
 def predict_survival(pclass: int, age: float, sibsp: int, parch: int):
